@@ -24,8 +24,7 @@ This application is aimed at providing a platform for users to explore and enjoy
    cd anime-series-app
 ```
 ## 3. Install dependencies:
-```
-    npm install
+``` npm install
 ```
 ## 4.Usage
 To start the development server, run the following command:
