@@ -1,5 +1,12 @@
 
 
+## [0.3.0](https://github.com/sanchit-sherawat/anime-series-app/compare/v0.2.0...v0.3.0) (2024-03-21)
+
+
+### Features
+
+* ISC license implement ([f3b8d45](https://github.com/sanchit-sherawat/anime-series-app/commit/f3b8d45cb7534c32acfa4b90fda55b8401255c89))
+
 ## [0.2.0](https://github.com/sanchit-sherawat/anime-series-app/compare/v0.1.0...v0.2.0) (2024-03-21)
 
 
