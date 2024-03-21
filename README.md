@@ -62,5 +62,6 @@ Conventional Changelog
 ## Contact
 For any inquiries or support, please contact sanchitsherawatk@gmail.com.
 ```
-Feel free to customize and expand upon this template to better fit your project's specific requirements and features.
+Feel free to customize and expand upon this template to better fit your
+project's specific requirements and features.
 ```
