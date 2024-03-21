@@ -1,5 +1,16 @@
 
 
+* Merge branch 'main' of https://github.com/sanchit-sherawat/anime-series-app into main (7f125e8)
+* feat: MIT licese (a9d3c23)
+* Update README.md (63fe5da)
+* Update README.md (6121cc3)
+* Update README.md (c90a594)
+* Update LICENSE.md (50368c5)
+* Update README.md (d69c355)
+* Update README.md (dbdcff3)
+* Update README.md (b3ae4da)
+* Update README.md (e8e2da1)
+
 ## [0.3.0](https://github.com/sanchit-sherawat/anime-series-app/compare/v0.2.0...v0.3.0) (2024-03-21)
 
 
