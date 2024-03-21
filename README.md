@@ -43,6 +43,8 @@ Please make sure to follow the Contribution Guidelines when contributing to this
 
 ## License
 This project is licensed under the MIT [LICENSE](LICENSE) - see the LICENSE file for details.
+This project is licensed under the ISC [LICENSE](LICENSE) - see the LICENSE file for details.
+
 ## Acknowledgements
 React
 React Router
