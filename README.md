@@ -42,8 +42,8 @@ Create a new Pull Request.
 Please make sure to follow the Contribution Guidelines when contributing to this project.
 
 ## License
--This project is licensed under the MIT [LICENSE](LICENSE) - see the LICENSE file for details.
--This project is licensed under the ISC [LICENSE](LICENSE.md) - see the LICENSE file for details.
+ - This project is licensed under the MIT [LICENSE](LICENSE) - see the LICENSE file for details.
+ - This project is licensed under the ISC [LICENSE](LICENSE.md) - see the LICENSE file for details.
 
 ## Acknowledgements
 React
