@@ -25,11 +25,12 @@ This application is aimed at providing a platform for users to explore and enjoy
 ```
 ## 3. Install dependencies:
 ```
-    npm install
+npm install
 ```
 ## 4.Usage
 To start the development server, run the following command:
-```npm start
+```
+npm start
 ```
 ## Contributing :
 ```Fork the repository.
@@ -42,7 +43,9 @@ Create a new Pull Request.
 Please make sure to follow the Contribution Guidelines when contributing to this project.
 
 ## License
-This project is licensed under the MIT [LICENSE](LICENSE) - see the LICENSE file for details.
+ - This project is licensed under the MIT [LICENSE](LICENSE) - see the LICENSE file for details.
+ - This project is licensed under the ISC [LICENSE](LICENSE.md) - see the LICENSE file for details.
+
 ## Acknowledgements
 React
 React Router
@@ -59,5 +62,6 @@ Conventional Changelog
 ## Contact
 For any inquiries or support, please contact sanchitsherawatk@gmail.com.
 ```
-Feel free to customize and expand upon this template to better fit your project's specific requirements and features.
+Feel free to customize and expand upon this template to better fit your
+project's specific requirements and features.
 ```
