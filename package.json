@@ -1,6 +1,6 @@
 {
   "name": "anime-series-app",
-  "version": "0.3.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@commitlint/cli": "^19.2.1",
@@ -28,6 +28,16 @@
     "eject": "react-scripts eject",
     "release1": "release-it"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanchit-sherawat/anime-series-app.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanchit-sherawat/anime-series-app/issues"
+  },
+  "homepage": "https://github.com/sanchit-sherawat/anime-series-app#readme",
   "eslintConfig": {
     "extends": [
       "react-app",
