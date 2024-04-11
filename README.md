@@ -3,6 +3,7 @@
 ## Description
 
 This application is aimed at providing a platform for users to explore and enjoy anime series. It offers features for browsing, searching, and watching various anime series.
+![Screenshot from 2024-04-11 17-40-15](https://github.com/sanchit-sherawat/anime-series-app/assets/69462311/c78a8f43-2603-4709-9172-b5202213261e)
 
 ## Features
 
