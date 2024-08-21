@@ -3,7 +3,7 @@
 
 
 // services/animeService.js
-import apiService from './apiService';
+import {apiService} from './apiService';
 // src/services/animeSeriesService.js
 // const BASE_URL = 'http://localhost:3001/api/animeSeries';
 

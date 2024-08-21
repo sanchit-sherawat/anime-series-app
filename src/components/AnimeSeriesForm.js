@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as Yup from 'yup';
 import "./Anime.css"
 import { useLocation } from 'react-router-dom';
 import animeSeriesService from '../services/animeSeriesService';
+import animeService from '../services/animeService';
 
 // Define validation schema using Yup
 const validationSchema = Yup.object({
@@ -37,7 +38,7 @@ const AnimeForm = (e) => {
     count: '',
     server: '',
     language: '',
-    scries: [],
+    scries: [{ name: '', url: '' }],
   });
 
 
@@ -84,6 +85,24 @@ const AnimeForm = (e) => {
     });
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+          const response = await animeSeriesService.getAnimeSeriesById(todos).then((res) => {
+              return res
+          })
+          console.log(response.data, "serise")
+          setValues(response?.data[0]);
+          // setUrl(response.data[0]?.scries[0]?.url)
+      } catch (error) {
+          console.error('Error fetching Anime Series:', error);
+          // Handle error, e.g., show an error message
+      }
+  };
+
+  if(todos){fetchData()}
+  }, []);
+
   const handleSubmit = async(e) => {
     e.preventDefault();
 
@@ -117,7 +136,7 @@ const AnimeForm = (e) => {
               name="animename"
               onChange={(e) => handleSChange(0, 'animename', e.target.value)}
               onBlur={handleBlur}
-              value={values.animename}
+              value={values?.animename}
             />
             {errors.animename && <div className="error-message">{errors.animename}</div>}
           </div>
@@ -130,7 +149,7 @@ const AnimeForm = (e) => {
               name="description"
               onChange={(e) => handleSChange(0, 'description', e.target.value)}
               onBlur={handleBlur}
-              value={values.description}
+              value={values?.description}
             />
             {errors.description && <div className="error-message">{errors.description}</div>}
           </div>
@@ -145,7 +164,7 @@ const AnimeForm = (e) => {
               name="count"
               onChange={(e) => handleSChange(0, 'count', e.target.value)}
               onBlur={handleBlur}
-              value={values.count}
+              value={values?.count}
             />
             {errors.count && <div className="error-message">{errors.count}</div>}
           </div>
@@ -159,7 +178,7 @@ const AnimeForm = (e) => {
               name="server"
               onChange={(e) => handleSChange(0, 'server', e.target.value)}
               onBlur={handleBlur}
-              value={values.server}
+              value={values?.server}
             />
             {errors.count && <div className="error-message">{errors.count}</div>}
           </div>
@@ -173,14 +192,14 @@ const AnimeForm = (e) => {
               name="language"
               onChange={(e) => handleSChange(0, 'language', e.target.value)}
               onBlur={handleBlur}
-              value={values.language}
+              value={values?.language}
             />
             {errors.count && <div className="error-message">{errors.count}</div>}
           </div>
 
           <div className="form-group">
 
-            {values.scries.map((scrie, index) => (
+            {values?.scries?.map((scrie, index) => (
 
               <>
                 <div key={index} className="episode-group">
@@ -194,7 +213,7 @@ const AnimeForm = (e) => {
                     placeholder="Episode Name"
                     onChange={(e) => handleChange(index, 'name', e.target.value)}
                     onBlur={handleBlur}
-                    value={scrie.name}
+                    value={scrie?.name}
                   />
                   <input
                     // className='inputep'
@@ -205,9 +224,9 @@ const AnimeForm = (e) => {
                     placeholder="Episode URL"
                     onChange={(e) => handleChange(index, 'url', e.target.value)}
                     onBlur={handleBlur}
-                    value={scrie.url}
+                    value={scrie?.url}
                   />
-                  {errors.scries[index]?.name && <div className="error-message">{errors.scries[index].name}</div>}
+                  {errors.scries[index]?.name && <div className="error-message">{errors.scries[index]?.name}</div>}
                   <button type="button" onClick={() => handleRemoveEpisode(index)}>
                     Remove Episode
                   </button>

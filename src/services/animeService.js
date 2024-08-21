@@ -1,5 +1,5 @@
 // services/animeService.js
-import apiService from './apiService';
+import {apiService} from './apiService';
 
 const getAnimeCards = () => apiService.get('/card/anime-cards');
 const getAnimeCardById = (id) => apiService.get(`/card/anime-cards/${id}`);
