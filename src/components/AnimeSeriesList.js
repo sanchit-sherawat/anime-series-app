@@ -42,7 +42,7 @@ const AnimeSeriesList = () => {
     console.log(`Clicked on ${animename}`);
     // // Add your click handling logic here
     // <Navigate to="/add-anime-series" state={{ todos: animename}} replace={true} />
-    navigate('/anime-series/player', { state: { todos: animename } });
+    navigate('/anime/anime-series/player', { state: { todos: animename } });
   };
 
   return (

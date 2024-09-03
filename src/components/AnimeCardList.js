@@ -36,7 +36,7 @@ const AnimeCardList = () => {
     console.log(`Clicked on ${animename}`);
     // Add your click handling logic here
     // <Navigate to="/add-anime-series" state={{ todos: animename}} replace={true} />
-    navigate('/add-anime-series', { state: { todos: animename } });
+    navigate('/anime/add-anime-series', { state: { todos: animename } });
   };
 
   return (

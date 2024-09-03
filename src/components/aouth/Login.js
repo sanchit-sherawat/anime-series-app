@@ -26,7 +26,7 @@ const Login = () => {
         let result = await goAouthService.login(payload)
         console.log(result)
         
-        alert(result.data.message)
+        alert(result.data.message+"sdfs")
         localStorage.setItem("accessToken", result.data.token);
         localStorage.setItem("login", "true");
         // navigate("/anime-cards")
@@ -35,7 +35,7 @@ const Login = () => {
         // redirect("http://localhost:3002//anime-cards")
 
     }catch(err){
-        alert(err.message)
+        alert(err.message+"j")
     }
 
         // setName("")

@@ -2,9 +2,9 @@
 
 body {
 	font-family: Poppins;
-	background-image: url("https://images.unsplash.com/photo-1516124540143-26bf0c56ea23?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg1MzI3Mzd8&ixlib=rb-4.0.3&q=85");
+	/* background-image: url("https://images.unsplash.com/photo-1516124540143-26bf0c56ea23?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg1MzI3Mzd8&ixlib=rb-4.0.3&q=85"); */
 	background-size: 100vw;
-	background-color: white;
+	background-color: rgb(128, 133, 105);
 	/* height: 100vh;
 	width: 100vh; */
 	margin: 0px;

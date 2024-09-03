@@ -1,0 +1,103 @@
+.procompon{
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-between; */
+}
+
+.prophoto img {
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    object-fit: fill;
+    /* border: 1px dashed #fff; */
+}
+
+.sidebar {
+    /* margin: 0;
+    padding: 0; */
+    width: 55%;
+    /* background-color: #f1f1f1; */
+    /* background-color: rgba(147, 97, 238, 0.461); */
+    box-shadow: -4px 5px 10px 4px rgba(62, 2, 126,0.7);
+    /* text-decoration: none; */
+    /* color: antiquewhite; */
+    
+    /* position: fixed; */
+    /* height: 100%;
+    overflow: auto; */
+    
+  }
+
+  .homepro{
+    display: flex;
+
+  }
+
+.sidebar:hover {
+	backdrop-filter: blur(2px);
+    /* animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;   */
+}
+
+.sidebar a {
+    display: grid;
+	z-index: 2;
+	transition: border 0.2s ease;
+	text-decoration: none;
+	color: white;
+	padding: 15px;
+	/* padding-bottom: 3px;
+	padding-top: 3px; */
+	/* margin-left: 5px; */
+	border: 1px solid rgba(255, 255, 255, 0);
+	border-radius: 999px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;  
+}
+
+.sidebar a:hover {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 999px;
+	backdrop-filter: blur(2px);
+}
+
+.sidebar img{
+    width: 80%;
+    height: 99%;
+	color: rgb(0, 0, 0);
+    
+
+    
+
+}
+
+.sidebar img:hover{
+    width: 80%;
+    height: 99%;
+	color: rgb(0, 0, 0);
+    animation-name: icon;
+    animation-duration: 4s;
+    animation-iteration-count: 3;  
+
+    
+
+}
+
+
+@keyframes example {
+    0%   {background-color:rgba(238, 85, 85, 0.496); top:0px;  }
+    25%  {background-color:rgba(205, 205, 111, 0.47);  top:0px;}
+    50%  {background-color:rgba(106, 106, 207, 0.361);  top:200px;}
+    75%  {background-color:rgba(98, 176, 98, 0.352);  top:200px;}
+    100% {background-color:rgba(161, 108, 108, 0.276); top:0px;}
+  }
+
+  @keyframes icon {
+    0%   {background-color:rgba(238, 85, 85, 0.042); left:0px; top:0px;  transform: rotateY(0deg); }
+    25%  {background-color:rgba(205, 205, 111, 0.03); left:200px; top:0px;  transform: rotateY(90deg)}
+    50%  {background-color:rgba(106, 106, 207, 0.045); left:200px; top:200px;  transform: rotateY(180deg) }
+    75%  {background-color:rgba(98, 176, 98, 0); left:0px; top:200px;  transform: rotateY(270deg)}
+    100% {background-color:rgba(161, 108, 108, 0.042); left:0px; top:0px;  transform: rotateY(360deg) }
+}
