@@ -12,6 +12,9 @@ import RoutesCard from './routesCards';
 // import ProfileSide from '../profilecomponent/profileSide';
 import Home from '../profilecomponent/home';
 import AnimeSide from './animeside';
+import "./homeCard.css"
+import MiniComponents from '../miniComponents/miniComponents';
+
 const AppRoutes = () => {
     const navigate = useNavigate();
     const [token, setToken] = useState(null);
@@ -57,10 +60,13 @@ const AppRoutes = () => {
             {siteChange === "" ? PageRoutes(handleCardClick, handleCardHover, handleCardLeave) : <></>}
             {/* <RoutesCard animename={"Profile Site"} />
             <RoutesCard animename={"Todo  Site"} /> */}
+            <Routes>  <Route path="/login" element={<Navigate to="/home" replace />} /></Routes>
 
 
             {siteChange === "anime" ? anmineSide() : <></>}
-            {siteChange === "Profile" ? <Home /> : <></>}
+            {siteChange === "profile/home" ? <Home /> : <></>}
+            {siteChange === "mini" ? <MiniComponents /> : <></>}
+
 
         </>
     );
@@ -69,7 +75,7 @@ const AppRoutes = () => {
 export default AppRoutes;
 
 function PageRoutes(handleCardClick, handleCardHover, handleCardLeave) {
-    return <>
+    return <div className="homecontainer">
         <RoutesCard
             animename={"Anime Site"}
             onClick={() => handleCardClick("anime")}
@@ -77,18 +83,23 @@ function PageRoutes(handleCardClick, handleCardHover, handleCardLeave) {
             onMouseLeave={() => handleCardLeave()} />
         <RoutesCard
             animename={"Profile Site"}
-            onClick={() => handleCardClick("Profile")}
+            onClick={() => handleCardClick("profile/home")}
+            onMouseEnter={() => handleCardHover("anime.description")}
+            onMouseLeave={() => handleCardLeave()} />
+        <RoutesCard
+            animename={"mini"}
+            onClick={() => handleCardClick("mini")}
             onMouseEnter={() => handleCardHover("anime.description")}
             onMouseLeave={() => handleCardLeave()} />
         <RoutesCard
             animename={"ToDO Site"}
             onClick={() => handleCardClick("ToDO")}
             onMouseEnter={() => handleCardHover("anime?.description")}
-            onMouseLeave={() => handleCardLeave()} /></>;
+            onMouseLeave={() => handleCardLeave()} /></div>;
 }
 
 function anmineSide() {
-    return <><Navbar /> <Routes>
+    return <> <Routes >
         {/* <Route path="/anime" element={<Navigate to="anime/anime-cards" replace />} /> */}
 
         <Route path="/anime" element={<ProtectedRoutes><AnimeSide /></ProtectedRoutes>} >

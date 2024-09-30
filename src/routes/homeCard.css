@@ -1,0 +1,22 @@
+
+.homecontainer {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    gap: 16px; /* Adjust the gap as needed */
+    background-color: aliceblue;
+    height: 95vh;
+}
+
+.homecard {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    /* transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; */
+}
+
+.homecard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+}

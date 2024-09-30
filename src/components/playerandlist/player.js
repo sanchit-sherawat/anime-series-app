@@ -7,18 +7,22 @@ const VideoPlayer = (url) => {
     const controls = true, width = "100%", height = "100%"
 
     return (
-        <>
+        <div className='videoplayer' >
             <ReactPlayer
+                autoPlay
                 // ref={playerRef}
                 url={url.values.url}
                 controls={controls}
                 width={width}
-                height={height}
-                playing={url.values.play}
+                height={"auto"}
+            
+                // light={url.values.url}
+                // playing={url.values.play}
+                playing={true}
 
             ></ReactPlayer>
 
-        </>
+        </div>
     );
 };
 

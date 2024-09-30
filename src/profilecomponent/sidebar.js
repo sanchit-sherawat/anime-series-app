@@ -22,10 +22,10 @@ const SideBar = () => {
         <div className='sidebar'>
             {/* <ul> */}
                 {/*<Link to="/">Home</Link> */}
-                <Link to="anime/anime-cards" title='home'><img src={home} alt='home'/></Link>
-                <Link to="anime/add-anime" title='technology'><img src={tech} alt='tech'/></Link>
-                <Link to="anime/anime-series" title='Projects'><img src={project} alt='project'/></Link>
-                <Link to="anime/add-anime-series" title='Contact Info'><img src={contact} alt='contact' /></Link>
+                <Link to="profile/home"><img src={home} alt='home'/></Link>
+                <Link to="profile/technology" ><img src={tech} alt='tech'/></Link>
+                <Link to="profile/projects" title='Projects'><img src={project} alt='project'/></Link>
+                <Link to="profile/Contact" title='Contact Info'><img src={contact} alt='contact' /></Link>
                 {/* <button to="/login" onClick={()=>setLocal()} >LogOut </button> */}
 
                 {/* <Link to="users">users</Link> */}

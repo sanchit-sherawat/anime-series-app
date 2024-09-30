@@ -45,7 +45,7 @@ const AnimeCardForm = () => {
             name="animename"
             onChange={(e) => handleChange(e)}
             // onBlur={handleBlur}
-            value={formData.animename}
+            value={formData?.animename}
           />
           {/* {errors.animename && <div className="error-message">{errors.animename}</div>} */}
         </div>

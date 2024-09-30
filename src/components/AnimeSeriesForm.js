@@ -55,15 +55,29 @@ const AnimeForm = (e) => {
   };
 
   const handleBlur = () => {
-    const { animename, description, count, server,language, scries } = values;
+    if (!values?.animename) {
+      // alert(values)
+      // return
+
+    }
+    // let { animename, description, count, server,language, scries } = values || {};
+    let { animename, description, count, server, language, scries } = values || {
+      animename: todos ? todos.animename : "",
+      description: todos ? todos.description : '',
+      count: todos ? todos.totalEpisode : "",
+      server: '',
+      language: '',
+      scries: [{ name: '', url: '' }],
+    };
+    scries = scries || [{ name: '', url: '' }];
 
     validationSchema
-      .validate({ animename, description, count, server, language,scries }, { abortEarly: false })
+      .validate({ animename, description, count, server, language, scries }, { abortEarly: false })
       .then(() => {
-        setErrors({ animename: '', description: '', count: '', server: '', language:'',scries: [] });
+        setErrors({ animename: '', description: '', count: '', server: '', language: '', scries: [] });
       })
       .catch((err) => {
-        const newErrors = { animename: '', description: '', count: '', server: '', language:'',scries: [] };
+        const newErrors = { animename: '', description: '', count: '', server: '', language: '', scries: [] };
         err.inner.forEach((error) => {
           newErrors[error.path] = error.message;
 
@@ -79,37 +93,54 @@ const AnimeForm = (e) => {
   };
 
   const handleAddEpisode = () => {
-    setValues({
-      ...values,
-      scries: [...values.scries, { name: '', url: '' }],
-    });
+    if (!values) {
+      setValues({
+        ...values,
+        scries: [{ name: '', url: '' }],
+      });
+    } else {
+      setValues({
+        ...values,
+        scries: [...values?.scries, { name: '', url: '' }],
+      });
+    }
   };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-          const response = await animeSeriesService.getAnimeSeriesById(todos).then((res) => {
-              return res
-          })
-          console.log(response.data, "serise")
-          setValues(response?.data[0]);
-          // setUrl(response.data[0]?.scries[0]?.url)
-      } catch (error) {
-          console.error('Error fetching Anime Series:', error);
-          // Handle error, e.g., show an error message
-      }
-  };
+        const response = await animeSeriesService.getAnimeSeriesById(todos).then((res) => {
+          return res
+        })
+        console.log(response.data, "serise")
+        if(response?.data[0].scries.length<1){
+        setValues({...response?.data[0],scries: [{ name: '', url: '' }],});
 
-  if(todos){fetchData()}
+        }else{
+          setValues(response?.data[0])
+        }
+        // setUrl(response.data[0]?.scries[0]?.url)
+      } catch (error) {
+        console.error('Error fetching Anime Series:', error);
+        // Handle error, e.g., show an error message
+      }
+    };
+
+    if (todos) { fetchData() }
   }, []);
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if(todos.animename){
+      const res = await animeSeriesService.createAnimeSeries(values)
 
-    try{
+      
+    }
+
+    try {
       const res = await animeSeriesService.createAnimeSeries(values)
       console.log(res)
-    }catch(err){
+    } catch (err) {
 
     }
 

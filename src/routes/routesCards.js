@@ -1,6 +1,8 @@
 // AnimeCard.js
 import React, { useState } from 'react';
 import './AnimeCard.css'; // Import the CSS file
+import './homeCard.css'; // Import the CSS file
+
 
 
 const RoutesCard = ({ animename, description, totalEpisode, posterURL, onClick, onMouseEnter, onMouseLeave ,count}) => {
@@ -10,8 +12,8 @@ const RoutesCard = ({ animename, description, totalEpisode, posterURL, onClick, 
     }
     
 
-    return (
-        <div className={`card ${isHovered ? 'hovered' : ''}`} onClick={onClick}
+    return (<div >
+        <div className={`homecard ${isHovered ? 'hovered' : ''}`} onClick={onClick}
             onMouseEnter={() => {
                 setIsHovered(true);
                 onMouseEnter();
@@ -22,11 +24,12 @@ const RoutesCard = ({ animename, description, totalEpisode, posterURL, onClick, 
             }}
         >
             {/* <img src={posterURL} alt={animename} className="anime-img" /> */}
-            <div className="container">
+            <div style={{display: "flex"}}>
                 <h4><b>{animename} </b></h4>
                 <br />
                 {isHovered ? <p>{description}</p> : <p >...</p>}
             </div>
+        </div>
         </div>
     );
 };

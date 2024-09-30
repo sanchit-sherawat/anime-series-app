@@ -1,6 +1,5 @@
 // AnimeCard.js
 import React, { useState } from 'react';
-import './AnimeCard.css'; // Import the CSS file
 
 const AnimeCard = ({ animename, description, totalEpisode, posterURL, onClick, onMouseEnter, onMouseLeave ,count}) => {
     const [isHovered, setIsHovered] = useState(false);

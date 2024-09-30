@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.allcontainer{
+  overflow: auto;
+  height: 50vh;
+  margin-top: 23px;
+}

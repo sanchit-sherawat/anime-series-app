@@ -11,7 +11,7 @@
     overflow: hidden;
     width: 100%;
     /* height: auto; */
-    height: 50%;
+    height: 174px;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -23,21 +23,8 @@
 
 .anime-img {
     width: 100%;
-    height: 50%;
+    height: 100px;
     /* height: auto; */
     border-radius: 4px;
 }
-/* .anime-img:hover {
-    width: 100%;
-    height: 50%;
-    height: auto;
-    border-radius: 4px;
-} */
 
-.container {
-    padding: 16px;
-}
-
-.container h4 {
-    margin-top: 0;
-}

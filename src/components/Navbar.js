@@ -15,13 +15,13 @@ const Navbar = () => {
 
     }
     return (
-        <nav>
+        <nav className='navbar'>
             {/* <ul> */}
                 {/*<Link to="/">Home</Link> */}
-                <Link to="anime/anime-cards">Anime Cards</Link>
-                <Link to="anime/add-anime">Add Anime</Link>
-                <Link to="anime/anime-series">Anime Series List</Link>
-                <Link to="anime/add-anime-series">Add Anime Series </Link>
+                <Link to="anime-cards">Anime Cards</Link>
+                <Link to="add-anime">Add Anime</Link>
+                <Link to="anime-series">Anime Series List</Link>
+                <Link to="add-anime-series">Add Anime Series </Link>
                 <button to="/login" onClick={()=>setLocal()} >LogOut </button>
 
                 {/* <Link to="users">users</Link> */}
