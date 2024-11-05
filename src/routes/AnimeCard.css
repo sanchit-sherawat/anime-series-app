@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 16px; /* Adjust the gap as needed */
+    margin-top: 23px;
 }
 
 .card {

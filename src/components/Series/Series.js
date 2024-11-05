@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import React from "react";
 // import ReactPlayer from "react-player";
 import VideoPlayer from "../playerandlist/player";
-import { useLocation,useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import animeSeriesService from '../../services/animeSeriesService';
 import animeService from '../../services/animeService';
 
@@ -12,8 +12,11 @@ const VideoPlayers = () => {
     const location = useLocation();
     const todos = location?.state?.todos;
     const [play, setPlay] = useState(false)
+    const [comment, setComment] = useState("")
 
     const [animeSeriesList, setAnimeSeriesList] = useState([]);
+    const [comments, setComments] = useState([])
+    const [language,setLanguage]= useState(0)
     const navigate = useNavigate();
 
     // const navigate = useNavigate();
@@ -33,14 +36,14 @@ const VideoPlayers = () => {
         fetchData();
     }, []);
     // console.log("todo", todos)
-    const [values, setValues] = useState({
+    const [values, setValues] = useState([{
         animename: todos ? todos.animename : "",
         description: todos ? todos.description : '',
         count: todos ? todos.totalEpisode : "",
         server: '',
         language: '',
         scries: [{ name: '', url: '' }],
-    });
+    }]);
     const [url, setUrl] = useState('')
     const [epname, setEpName] = useState('')
 
@@ -89,21 +92,61 @@ const VideoPlayers = () => {
         navigate('/anime/anime-series/player', { state: { todos: animename } });
         // window.location.reload()
         window.scrollTo(0, 0)
-      };
+    };
+
+    const commentSubmit = () => {
+        if (comment) {
+            setComments([...comments, comment]);
+            setComment(''); // Clear the input after submitting
+        }
+    }
     return (
 
         <div className="container">
             <div className="video-player-container">
                 <VideoPlayer values={{ url, play }} />
                 <h1>{todos.animename} {epname}</h1>
+                <div className='likelanguage'>
+                    {values?.map((value, key) => (<div>
+                        <input type="radio" id="html" name="fav_language" value={key} onChange={(e)=>setLanguage(e.target.value)}  />
+                        <label for="html"  >{value.language}</label>
+                       {
+                        // alert(language) 
+                       
+                       }
+                        {/* <h1>{value.language}</h1> */}
+                    </div>
+                    )
+                    )}
+                    <div style={{ display: "flex", gap: "16px", }}>
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+
                 <div className='videodes'>{todos.description}</div>
+
                 <div className='videodes1'>
-                    
+
                     {/* {todos.description} */}
                     <h3>Comments</h3>
-                    
-                    <input className='inputComments' placeholder='Add a Comment ...'></input>
-                
+
+                    <input
+                        className="inputComments"
+                        placeholder="Add a Comment ..."
+                        value={comment}
+                        onChange={(e) => setComment(e.target.value)}
+                    />
+                    <button onClick={commentSubmit}>Submit</button>
+
+                    {comments.map((com, key) => (
+                        <div key={key}>
+                            <hr />
+                            <p>{com}</p>
+                            <hr />
+                        </div>
+                    ))}
+
                 </div>
             </div>
             <div className="lift-list-container">
@@ -113,8 +156,8 @@ const VideoPlayers = () => {
                     </div>
                     <div className='video-list'>
 
-                        {values[0]?.scries?.map((video, key) => (
-                            <div key={key} className= {epname!==video.name? "video-list-url":"video-list-url-click"} onClick={(e) => setOnclick(video)} >
+                        {values[language]?.scries?.map((video, key) => (
+                            <div key={key} className={epname !== video.name ? "video-list-url" : "video-list-url-click"} onClick={(e) => setOnclick(video)} >
                                 <div>
 
                                     <img src={todos.posterURL} className='imagethum' alt="Forest" />
@@ -144,12 +187,12 @@ const VideoPlayers = () => {
 
 
                         {animeSeriesList.map((video, key) => (
-                            
-                             (video.animename?video.animename!==todos.animename:video.animename) ?  <div key={key} className='video-list-url' onClick={(e) => handleCardClick(video)} >
+
+                            (video.animename ? video.animename !== todos.animename : video.animename) ? <div key={key} className='video-list-url' onClick={(e) => handleCardClick(video)} >
                                 <div className='randomcard'>
-                                <i style={{
+                                    <i style={{
                                         // margin: "10%",
-                                        padding:"5px",
+                                        padding: "5px",
                                         position: "absolute"
                                     }} class="fa fa-play" aria-hidden="true"></i>
                                     <img src={video.posterURL} className='imagethum1' alt="Forest" />

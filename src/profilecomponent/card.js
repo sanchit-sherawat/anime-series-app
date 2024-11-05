@@ -3,10 +3,14 @@ const Card = () =>{
 
     return(
         <>
-        <div >
-            <div style={{color:"black"}}>head</div>
+        <div className="HHH">
+            {/* <div style={{color:"black"}}>head</div> */}
             <div>
-                <div>list1</div>
+                <div></div>
+                {/* <h1>this is a font end </h1> */}
+                <h3>: React js</h3>
+                <h3>: React js</h3>
+                
             </div>
         </div>
         </>

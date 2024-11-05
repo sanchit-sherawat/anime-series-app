@@ -2,6 +2,7 @@
   display: flex;
   gap: 50px;
   justify-content: center;
+  margin-top: 23px;
 
 
 }
@@ -54,6 +55,7 @@
   justify-content: start;
   gap: 10px;
   padding: 4px 4px 4px 6px;
+  margin-right: 10px;
 
   /* background-color: rgb(129, 154, 53); */
   /* padding: 10px; */
@@ -69,6 +71,7 @@
   padding: 4px 4px 4px 6px;
   background-color: #88888830;
   padding: 5px 5px 5px 8px;
+  margin-right: 10px;
 
 }
 
@@ -125,7 +128,7 @@
 }
 
 .imagethum {
-  border: 1px solid;
+  border: 0px solid;
   border-radius: 9px;
   width: 100px;
   height: 56px;
@@ -170,5 +173,15 @@
 .inputComments :focus{
   /* border: none; */
   border: 3px solid #555;
+}
+
+.likelanguage{
+  padding: 2px;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  background-color: #555;
 }
 

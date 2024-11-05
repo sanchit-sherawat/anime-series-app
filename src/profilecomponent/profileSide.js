@@ -1,8 +1,10 @@
 import React from 'react';
 import sanchitImage from '../icons/sanchit.png';
 import './pro.css';
-import Card from './card';
+// import Card from './card';
 import DetailsPage from './detail';
+// import Projects from './project';
+import Slider from '.';
 
 function ProfileSide() {
     return (
@@ -24,9 +26,17 @@ function ProfileSide() {
             </div>
 
             <div className="procompon1">
+
               
                 <DetailsPage/>
                 {/* <Card/> */}
+
+            </div>
+            <div className="procompon2">
+              
+                {/* <DetailsPage/> */}
+               
+                <Slider/>
 
             </div>
 
