@@ -23,7 +23,7 @@ const RoutesCard = ({ animename, description, totalEpisode, posterURL, onClick, 
                 onMouseLeave();
             }}
         >
-            {/* <img src={posterURL} alt={animename} className="anime-img" /> */}
+            {posterURL&&<img src={posterURL} alt={animename} className="anime-img" />}
             <div style={{display: "flex"}}>
                 <h4><b>{animename} </b></h4>
                 <br />
