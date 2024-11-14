@@ -39,6 +39,7 @@ function ProfileSide() {
                 <Slider/>
 
             </div>
+            
 
 
         </div>

@@ -33,7 +33,13 @@ const WithImage = () => (
       forwardStyle={forwardStyleContent}
       backwardStyle={backwardStyleContent}
     >
-      <Content title={"This is autumn"} />
+      <Content title={"This is RSD cloud Project"} description={`
+      Radiant RSD Cloud Portal Video DIRECT Video Streams for Edge Encoder and
+      manage the property that has a license that created the channel.
+      It has a user that can access all the management and the creating billboards
+      and manage the time via rolls.\n
+      Used tech React js, Node js, MongoDB.
+      `} />
     </ActiveItem>
 
     <ActiveItem
