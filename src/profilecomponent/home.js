@@ -1,4 +1,3 @@
-import SideBar from "./sidebar";
 import ProfileSide from "./profileSide";
 import Profile from "./profile";
 import { Route, Routes, Navigate } from "react-router-dom";

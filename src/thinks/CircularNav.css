@@ -1,0 +1,47 @@
+.draggable-container1 {
+    position: absolute;
+    z-index: 1000;
+    cursor: grab;
+  }
+  
+  .menu-toggle1 {
+    background-color: #00aaff;
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .circle-menu1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -100px; /* Adjust for circle radius */
+    left: -100px; /* Adjust for circle radius */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .menu-item1 {
+    position: absolute;
+    background-color: #00aaff;
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  .menu-item1:hover {
+    background-color: #005f80;
+  }
+  

@@ -1,0 +1,232 @@
+.form1 {
+    border-radius: 10px 10px 1px 1px;
+    /* box-sizing: border-box; */
+    background-color: blanchedalmond;
+    box-shadow: 1px 1px 10px 1px black;
+    /* width: 90%; */
+    width: 50vw;
+}
+
+.form2 {
+    /* padding: 10px; */
+    border-radius: 10px 10px 1px 1px;
+    /* box-sizing: border-box; */
+    background-color: blanchedalmond;
+    box-shadow: 1px 1px 10px 1px black;
+    margin-left: 10px;
+    /* width: 90%; */
+    width: 25vw;
+}
+
+.form1 input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* resize: vertical; */
+
+}
+
+.button1 {
+    width: 88px;
+    height: 50px;
+}
+
+.forminput {
+    /* padding: 10px; */
+}
+
+.forminput label {
+
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.formhead {
+    border-radius: 10px 10px 1px 1px;
+    color: rgb(63, 63, 63);
+    width: 100%;
+    border: 1px solid;
+    height: 56px;
+    /* align-items: center; */
+    text-align: center;
+
+}
+
+.col-25 {
+    width: 100%;
+    margin-top: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.form1 input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.form1 label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: black;
+}
+
+.form1 input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.form1 input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+.form2 {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.form2 .formhead {
+    margin-bottom: 10px;
+}
+
+.time-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.time-slot {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    text-align: center;
+}
+
+.time-slot-header {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.time-slot-detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+}
+
+.value {
+    color: #007bff;
+}
+
+.no-data {
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+    width: 100%;
+}
+
+.error {
+    color: red;
+}
+
+.list {
+    border: 1px solid;
+    /* width: 50px; */
+    height: 20px;
+    background-color: #04AA6D;
+
+
+
+    .months-grid .month:hover {
+        background-color: #e0e0ff;
+    }
+
+    .calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+    }
+
+    .calendar-day {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .calendar-day.highlighted {
+        background-color: #007bff;
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
+.active-month{
+    color: #04AA6D;
+    background-color: #04AA6D;
+}

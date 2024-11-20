@@ -62,7 +62,9 @@
 }
 
 .toggle-button {
-    padding: 10px 20px;
+    height: 35px;
+    width: 48px;
+    /* padding: 10px 20px; */
     background-color: #8b8b8b;
     color: #fff;
     border: none;
