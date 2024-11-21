@@ -7,6 +7,7 @@ import DraggableNav from "./DraggableNav";
 import { Route, Routes, Navigate } from "react-router-dom";
 import CircularNav from "./CircularNav";
 import Stored from "./thinkscomponents/thinkstord";
+import CodeForm from "./thinkscomponents/CodeForm";
 // import UserTaskAdd from "./usertask/addlist";
 
 
@@ -19,8 +20,8 @@ const ReThinks = () => {
             {/* <Route path="/anime" element={<Navigate to="anime/anime-cards" replace />} /> */}
 
             <Route path="/Thinks" element={<ProtectedRoutes><Thinks /></ProtectedRoutes>} >
-                <Route path="tasklist" element={<ProtectedRoutes><Stored /></ProtectedRoutes>} />
-                {/* <Route path="addlist" element={<ProtectedRoutes><UserTaskAdd /></ProtectedRoutes>} /> */}
+                <Route path="list" element={<ProtectedRoutes><Stored /></ProtectedRoutes>} />
+                <Route path="add" element={<ProtectedRoutes><CodeForm /></ProtectedRoutes>} />
 
                 {/* <Route path="anime-cards" element={<ProtectedRoutes><AnimeCardList /></ProtectedRoutes>} />
                 <Route path="add-anime" element={<ProtectedRoutes><AnimeCardForm /></ProtectedRoutes>} />

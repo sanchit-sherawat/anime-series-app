@@ -35,10 +35,10 @@ const CircleNavBar = () => {
             <div className={`circle-nav ${isExpanded ? 'expanded' : 'collapsed'} ${isSpinning ? 'spinning' : ''}`} >
                 <ul>
                     <li><CgChevronLeftO className="taglink" onClick={toggleNav}/></li>
-                    <li><CgPlayListCheck className="taglink" onClick={()=>setLocal("Remember/tasklist")}/></li>
+                    <li><CgPlayListCheck className="taglink" onClick={()=>setLocal("Time/tasklist")}/></li>
                     {/* <li><a href="#">3</a></li>
                     <li><a href="#">4</a></li> */}
-                    <li><CgAdd className="taglink" onClick={()=>setLocal("Remember/addlist")}/></li>
+                    <li><CgAdd className="taglink" onClick={()=>setLocal("Time/addlist")}/></li>
                 </ul>
             </div>}
         </div>
